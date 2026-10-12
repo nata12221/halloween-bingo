@@ -362,7 +362,7 @@ function reveal(){
 spinBtn.addEventListener('click',()=>{
   if(busy||!remaining.length)return;
   busy=true;spinBtn.disabled=true;target=1;wheel.classList.add('spin');
-  timer=setTimeout(reveal,2100+rnd(1200));
+  timer=setTimeout(reveal,1600+rnd(1200));
 });
 $('#reset').addEventListener('click',()=>{
   clearTimeout(timer);busy=false;target=.1;wheel.classList.remove('spin');
