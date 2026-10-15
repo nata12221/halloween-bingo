@@ -69,7 +69,7 @@ img{image-rendering:pixelated;display:block;max-width:100%;user-select:none;-web
 .view-link:focus-visible{outline:3px solid #fff;outline-offset:6px}
 .view-link.active{color:#321000;background:#ffb21f;
   box-shadow:0 calc(-1*var(--px)) 0 #351064,0 var(--px) 0 #351064,calc(-1*var(--px)) 0 0 #351064,var(--px) 0 0 #351064,inset 0 calc(-3*var(--px)) 0 #e46d0c,inset 0 calc(3*var(--px)) 0 #ffe061}
-.game-view{display:flex;flex-direction:column;align-items:center;width:100%}
+.game-view{display:contents}
 .game-view>*{position:relative;z-index:2}
 .stage{display:flex;align-items:center;justify-content:center;gap:clamp(4px,2vw,24px);width:100%;margin-top:clamp(0px,1vw,10px)}
 .wheelwrap{position:relative;width:clamp(190px,50vw,470px);flex:none}
@@ -178,36 +178,6 @@ img{image-rendering:pixelated;display:block;max-width:100%;user-select:none;-web
   .rule-copy{min-height:0}
   .view-nav{gap:10px}
   .view-link{min-width:118px}
-}
-@media (min-width:960px) and (min-aspect-ratio:16/10){
-  html,body{height:100%;overflow:hidden}
-  .scene{width:min(100%,1920px);height:100dvh;min-height:0;padding:clamp(5px,.7vh,8px) 0 clamp(62px,9vh,96px)}
-  .view-nav{flex:none;margin-bottom:clamp(2px,.5vh,6px)}
-  .view-link{padding:clamp(7px,1vh,10px) clamp(14px,2vw,22px);font-size:clamp(14px,2vh,18px)}
-  .logo{width:min(15vw,15vh,230px)}
-  .game-view{display:grid;grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto auto;
-    grid-template-areas:"stage" "controls" "panel";align-items:center;align-content:stretch;flex:1;min-height:0;
-    row-gap:clamp(2px,.5vh,6px);width:min(96%,1760px)}
-  .stage{grid-area:stage;margin-top:0;gap:clamp(8px,1.2vw,20px);min-height:0}
-  .wheelwrap{width:min(30vw,34vh,390px)}
-  .out{width:min(10vw,15vh,150px);margin-bottom:clamp(4px,1vh,12px)}
-  .controls{grid-area:controls;z-index:4;justify-self:center;gap:clamp(8px,1.4vw,16px);margin:0}
-  .btn{font-size:clamp(13px,1.8vh,18px);padding:clamp(7px,1.1vh,11px) clamp(16px,2.5vw,28px)}
-  .panel{grid-area:panel;width:100%;max-width:none;align-self:end}
-  .grid{gap:clamp(3px,.35vw,7px)}
-  .cell{aspect-ratio:auto;height:clamp(27px,3.8vh,42px);font-size:clamp(12px,1.25vw,23px)}
-  .floor{height:clamp(64px,12vh,100px)}
-  .cattrack{bottom:clamp(4px,1vh,10px)}
-  .catwalk{width:clamp(72px,9vw,108px)}
-  .candles{right:clamp(8px,2vw,28px);bottom:clamp(4px,1vh,10px);width:clamp(58px,7vw,86px)}
-  .rules-view{width:min(96%,1240px);max-height:calc(100dvh - clamp(120px,18vh,170px));margin-top:clamp(4px,.8vh,10px);padding:clamp(12px,2vh,22px);overflow:auto}
-  .rules-title{margin-bottom:clamp(10px,2vh,20px);font-size:clamp(30px,5vh,48px)}
-  .rules-cards{gap:clamp(12px,2vw,22px)}
-  .rule-card{padding:clamp(10px,1.6vh,18px)}
-  .rule-card h3{margin-bottom:clamp(8px,1.4vh,14px);font-size:clamp(24px,4.4vh,36px)}
-  .rule-copy{min-height:0;margin-top:clamp(8px,1.4vh,14px);font-size:clamp(14px,2.4vh,19px)}
-  .line-notice{align-items:flex-start;margin-top:clamp(10px,1.8vh,18px);padding:clamp(9px,1.4vh,14px);padding-right:clamp(150px,20vw,220px);text-align:left;font-size:clamp(14px,2.3vh,19px)}
-  .rules-back{position:absolute;right:clamp(24px,4vw,52px);bottom:clamp(16px,3vh,28px);margin:0;padding:clamp(8px,1.3vh,12px) clamp(18px,2.5vw,28px);font-size:clamp(14px,2.2vh,18px)}
 }
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.bat,.spider,.flame,.glow,.wheelwrap.spin,.cell.fresh,.big.lit::before{animation:none}.big.pop{animation-duration:.01s}}
